@@ -1,0 +1,88 @@
+@import url(./buttons.css);
+
+body {
+    /*background-color: #26B4BC;*/
+    background-color: white;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+.highlight {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 65%, #ffff01 65%);
+}
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player {
+    margin-block-start: 50px;
+    position: relative;
+}
+.player video {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover;
+    
+}
+
+.player-title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 20px;
+}
+
+.player-actions {
+    position: absolute;
+    inset: 0; /* inset-block-end/start: 0, inset-inline-end/start: 0*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*z-index: 10;*/
+    gap: 20px;
+}
+
+.player-progress {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+}
+
+.player-progress input {
+    flex: 0.8;
+}
+
+.player-volume {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.player-volume input {
+    flex: 0.15;
+}
+.player-volume button {
+    padding: 0;
+}
+
+.player-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity;
+    z-index: 10;
+}
+
+.player:hover .player-overlay {
+    opacity: 1;
+}
